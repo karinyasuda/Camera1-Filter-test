@@ -99,7 +99,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         let myColorFilter = CIFilter(name: "CIColorCrossPolynomial")
         
         // イメージの!セット.
-        myColorFilter!.setValue(cameraImage, forKey: kCIInputImageKey)
+        myColorFilter!.setValue(CIImage(image: cameraImage.image!), forKey: kCIInputImageKey)
         
         let r: [CGFloat] = [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
         let g: [CGFloat] = [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
